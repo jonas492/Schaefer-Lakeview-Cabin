@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lakeview Cabin — Book Your Stay</title>
+  <meta name="description" content="Cozy lakeside cabin in Manitoba, Canada. Peaceful views, private dock, and endless forest trails. Book directly with the owner.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="container navbar">
+      <div class="logo"><span class="logo-badge">LB</span> Lakeview Cabin</div>
+      <div class="nav-links">
+        <a href="#gallery">Gallery</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#rates">Rates</a>
+        <a href="#book">Book</a>
+      </div>
+      <a class="btn primary" href="#book">Book now</a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-card">
+        <div class="kicker">Manitoba • Lakeside</div>
+        <h1>Unplug at a cozy cabin with big sky sunsets</h1>
+        <p class="sub">A bright, family‑friendly retreat on a wide open lawn just steps from the water and minutes from rocky lookout hikes.</p>
+        <div class="rate">
+          <span class="badge">Direct booking</span>
+          <span class="price">$185 CAD / night</span>
+        </div>
+        <p><small class="muted">No platform fees. 2‑night minimum. Pets on approval.</small></p>
+        <div class="cta">
+          <a class="btn primary" href="#book">Check availability</a>
+          <a class="btn" href="#gallery">See photos</a>
+        </div>
+      </div>
+      <div>
+        <img src="assets/images/cabin1.jpg" alt="Front view of the cabin with lawn and porch" style="width:100%;border-radius:18px;box-shadow:var(--shadow)">
+      </div>
+    </div>
+  </header>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2 class="h2">Gallery</h2>
+      <div class="grid">
+        <div style="grid-column: span 6"><img loading="lazy" src="assets/images/cabin1.jpg" alt="Cabin photo 1"></div><div style="grid-column: span 3"><img loading="lazy" src="assets/images/cabin2.jpg" alt="Cabin photo 2"></div><div style="grid-column: span 3"><img loading="lazy" src="assets/images/cabin3.jpg" alt="Cabin photo 3"></div><div style="grid-column: span 3"><img loading="lazy" src="assets/images/cabin4.jpg" alt="Cabin photo 4"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="amenities" class="features">
+    <div class="container">
+      <h2 class="h2">What you get</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Space &amp; Sleep</h3>
+          <p>2 bedrooms • 4 beds • 1 bath • Sleeps up to 6. Fresh linens and hotel‑style duvets provided.</p>
+        </div>
+        <div class="card">
+          <h3>Kitchen</h3>
+          <p>Full kitchen with range, fridge, cookware, coffee maker, and outdoor BBQ. Pantry basics included.</p>
+        </div>
+        <div class="card">
+          <h3>Outdoors</h3>
+          <p>Huge yard for yard games, fire pit with seating, forest trails nearby, and an easy stroll to the dock.</p>
+        </div>
+        <div class="card">
+          <h3>Tech &amp; Comfort</h3>
+          <p>Fast Wi‑Fi, smart TV, heat/AC, and self check‑in with keypad. Washer/dryer for longer stays.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rates">
+    <div class="container">
+      <div class="card">
+        <h2 class="h2">Rates</h2>
+        <p>Base rate is <strong>$185 CAD per night</strong> (seasonal adjustments may apply). $60 cleaning per stay. 12% tax. 2‑night minimum.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="container">
+      <div class="card">
+        <h2 class="h2">Book your stay</h2>
+        <form id="booking-form" class="form">
+          <div>
+            <label for="checkin">Check‑in</label>
+            <input id="checkin" name="checkin" type="date" required>
+          </div>
+          <div>
+            <label for="checkout">Check‑out</label>
+            <input id="checkout" name="checkout" type="date" required>
+          </div>
+          <div>
+            <label for="guests">Guests</label>
+            <select id="guests" name="guests" required>
+              <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+            </select>
+          </div>
+          <div>
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+          </div>
+          <div class="full">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+          <div class="full">
+            <label for="notes">Anything else?</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your trip, pets, or questions."></textarea>
+          </div>
+
+          <div class="full" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+            <div><strong>Estimated total:</strong> <span id="est">—</span> <small class="muted">(for <span id="nights">0</span> nights)</small></div>
+            <button class="btn primary" type="submit">Send booking request</button>
+          </div>
+          <p class="full"><small class="muted">Submitting opens your email app with a pre‑filled message. We’ll reply quickly to confirm.</small></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="card">
+        <h2 class="h2">House rules</h2>
+        <ul>
+          <li>No smoking inside.</li>
+          <li>Quiet hours 10pm–8am.</li>
+          <li>Pets considered on approval and small fee.</li>
+          <li>Please respect the neighbors and nature—leave no trace.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <strong>Questions?</strong><br>
+          <small class="muted">Email <a href="mailto:you@example.com">you@example.com</a> or call <a href="tel:+1-204-000-0000">+1 (204) 000‑0000</a></small>
+        </div>
+        <a class="btn" href="#book">Request dates</a>
+      </div>
+      <p><small class="muted">© 2025 Lakeview Cabin. All rights reserved.</small></p>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
