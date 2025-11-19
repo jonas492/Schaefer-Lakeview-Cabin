@@ -1,1 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AutofyTech – AI Receptionist & Automations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root { color-scheme: dark; }
+      ::selection { background: rgba(37,198,202,.35); }
+      body {
+        background:#0B1420;
+        margin:0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-white">
+    <!-- Background accent -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute inset-0 opacity-40"
+        style="background: radial-gradient(1200px 600px at 80% -10%, rgba(37,198,202,0.35), rgba(11,20,32,0));">
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-20 backdrop-blur bg-[#0B1420]/70">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-3">
+          <!-- Put AutofyTech_Logo_HQ.jpg in the same folder as this file -->
+          <img src="AutofyTech_Logo_HQ.jpg"
+               alt="AutofyTech Logo"
+               class="h-9 w-auto hidden sm:block rounded" />
+          <div class="flex items-center gap-3">
+            <div class="h-8 w-8 rounded-xl bg-[#25C6CA]"></div>
+            <span class="text-xl font-semibold tracking-tight">AutofyTech</span>
+          </div>
+        </div>
+        <div class="hidden items-center gap-8 md:flex text-sm">
+          <a href="#solutions" class="opacity-80 hover:opacity-100">Solutions</a>
+          <a href="#how" class="opacity-80 hover:opacity-100">How it works</a>
+          <a href="#benefits" class="opacity-80 hover:opacity-100">Benefits</a>
+          <a href="#faq" class="opacity-80 hover:opacity-100">FAQ</a>
+        </div>
+        <div class="flex items-center gap-3 text-sm">
+          <a href="tel:12044082309" class="hidden sm:block opacity-80 hover:opacity-100">(204) 408-2309</a>
+          <button id="openDemo"
+                  class="rounded-2xl bg-[#25C6CA] px-4 py-2 font-semibold text-[#0B1420] hover:brightness-110">
+            Book a demo
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="mx-auto max-w-7xl px-6 pt-14 pb-16 md:pt-24">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/90">
+            <span class="h-2 w-2 rounded-full bg-[#25C6CA]"></span>
+            24/7 AI Receptionist for SMBs
+          </div>
+          <h1 class="mt-4 text-4xl font-semibold leading-tight md:text-5xl">
+            Never miss a booking again.
+          </h1>
+          <p class="mt-4 max-w-xl text-white/80">
+            AutofyTech answers calls, schedules appointments, and handles follow-ups for small &amp; midsize businesses.
+            Purpose-built for high-volume phone workflows.
+          </p>
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <button id="openDemo2"
+                    class="rounded-2xl bg-[#25C6CA] px-5 py-3 font-semibold text-[#0B1420] hover:brightness-110">
+              Book a demo
+            </button>
+            <a href="#solutions"
+               class="rounded-2xl border border-white/10 px-5 py-3 font-semibold text-white/90 hover:bg-white/5">
+              See solutions
+            </a>
+          </div>
+          <div class="mt-6 text-sm text-white/60">
+            Or email
+            <a class="underline hover:text-white" href="mailto:Jonas@autofytek.com"> Jonas@autofytek.com</a>
+            • Call
+            <a class="underline hover:text-white" href="tel:12044082309"> (204) 408-2309</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl">
+            <div class="grid gap-3 sm:grid-cols-2 text-sm">
+              <div class="rounded-2xl border border-white/10 bg-[#0F1B29] p-4">
+                <h4 class="font-semibold text-white">Live Call Answering</h4>
+                <p class="mt-1 text-white/70">Greets callers, captures intent, routes or books.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-[#0F1B29] p-4">
+                <h4 class="font-semibold text-white">Smart Scheduling</h4>
+                <p class="mt-1 text-white/70">Checks calendar, offers times, confirms instantly.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-[#0F1B29] p-4">
+                <h4 class="font-semibold text-white">Lead Qualification</h4>
+                <p class="mt-1 text-white/70">Collects details, tags urgency, pushes to CRM.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-[#0F1B29] p-4">
+                <h4 class="font-semibold text-white">Follow-ups &amp; Reminders</h4>
+                <p class="mt-1 text-white/70">SMS/email confirmations and reminders.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions -->
+    <section id="solutions" class="mx-auto max-w-7xl px-6 py-16">
+      <h2 class="text-3xl font-semibold">Solutions</h2>
+      <p class="mt-2 max-w-2xl text-white/75">
+        Designed for small to medium businesses with heavy call volume—think home services, clinics, salons,
+        real estate, and service desks.
+      </p>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-xl font-semibold">AI Receptionist</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-white/75 text-sm">
+            <li>Answers calls, web chat, and SMS</li>
+            <li>Books &amp; reschedules appointments</li>
+            <li>Checks availability in Google/Outlook</li>
+            <li>Logs to CRM (HubSpot, Pipedrive)</li>
+            <li>Custom scripts &amp; escalation rules</li>
+          </ul>
+          <button
+            id="openDemo3"
+            class="mt-5 rounded-xl border border-white/10 bg-[#0F1B29] px-4 py-2 text-sm hover:bg-white/10">
+            Book a demo
+          </button>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-xl font-semibold">AI Automations</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-white/75 text-sm">
+            <li>Intake forms → CRM + Slack</li>
+            <li>After-hours call capture</li>
+            <li>Missed-call SMS follow-up</li>
+            <li>Payment links &amp; deposits</li>
+            <li>Post-visit review requests</li>
+          </ul>
+          <button
+            id="openDemo4"
+            class="mt-5 rounded-xl border border-white/10 bg-[#0F1B29] px-4 py-2 text-sm hover:bg-white/10">
+            See it in action
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6">
+        <p class="text-sm uppercase tracking-wider text-white/50">Integrates with</p>
+        <div class="mt-3 flex flex-wrap items-center gap-4 text-white/80 text-xs">
+          <span class="rounded-full border border-white/10 bg-[#0F1B29] px-3 py-1">Google Calendar</span>
+          <span class="rounded-full border border-white/10 bg-[#0F1B29] px-3 py-1">Outlook</span>
+          <span class="rounded-full border border-white/10 bg-[#0F1B29] px-3 py-1">Twilio</span>
+          <span class="rounded-full border border-white/10 bg-[#0F1B29] px-3 py-1">WhatsApp Business</span>
+          <span class="rounded-full border border-white/10 bg-[#0F1B29] px-3 py-1">Slack</span>
+          <span class="rounded-full border border-white/10 bg-[#0F1B29] px-3 py-1">Zapier</span>
+          <span class="rounded-full border border-white/10 bg-[#0F1B29] px-3 py-1">HubSpot</span>
+          <span class="rounded-full border border-white/10 bg-[#0F1B29] px-3 py-1">Stripe</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="mx-auto max-w-7xl px-6 py-16">
+      <h2 class="text-3xl font-semibold">How it works</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-4 text-sm">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-xs text-white/50">01</p>
+          <h4 class="mt-1 text-lg font-semibold">Discovery</h4>
+          <p class="mt-2 text-white/70">We map your call flows, booking rules, and integrations.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-xs text-white/50">02</p>
+          <h4 class="mt-1 text-lg font-semibold">Setup</h4>
+          <p class="mt-2 text-white/70">Connect calendars/CRMs, craft scripts, define escalation paths.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-xs text-white/50">03</p>
+          <h4 class="mt-1 text-lg font-semibold">Go Live</h4>
+          <p class="mt-2 text-white/70">Flip the switch for 24/7 coverage with analytics.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-xs text-white/50">04</p>
+          <h4 class="mt-1 text-lg font-semibold">Optimize</h4>
+          <p class="mt-2 text-white/70">Iterate on prompts, improve conversion, expand automations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="mx-auto max-w-7xl px-6 py-16">
+      <h2 class="text-3xl font-semibold">Why AutofyTech</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-3 text-sm">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h4 class="text-lg font-semibold">Capture Every Lead</h4>
+          <p class="mt-2 text-white/70">0 missed calls. After-hours and peak-time overflow handled automatically.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h4 class="text-lg font-semibold">Frictionless Booking</h4>
+          <p class="mt-2 text-white/70">Live availability checks and instant confirmations reduce no-shows.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h4 class="text-lg font-semibold">Lower Costs</h4>
+          <p class="mt-2 text-white/70">Extend your team without hiring. Scale up for seasonality in minutes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="mx-auto max-w-7xl px-6 pb-16">
+      <div class="rounded-3xl border border-white/10 bg-[#0F1B29] p-6">
+        <p class="text-sm uppercase tracking-wider text-white/50">Results</p>
+        <div class="mt-3 grid gap-6 md:grid-cols-3 text-center text-sm">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div class="text-4xl font-bold text-[#25C6CA]">+35%</div>
+            <div class="mt-1 text-white/70">increase in booked appointments</div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div class="text-4xl font-bold text-[#25C6CA]">-80%</div>
+            <div class="mt-1 text-white/70">reduction in missed calls</div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div class="text-4xl font-bold text-[#25C6CA]">24/7</div>
+            <div class="mt-1 text-white/70">coverage with smart escalation</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto max-w-7xl px-6 pb-20">
+      <h2 class="text-3xl font-semibold">FAQ</h2>
+      <div class="mt-6 divide-y divide-white/10 rounded-2xl border border-white/10 text-sm">
+        <details class="group p-5">
+          <summary class="cursor-pointer list-none text-lg font-medium">
+            <span class="group-open:text-[#25C6CA]">Can it handle complex booking rules?</span>
+          </summary>
+          <p class="mt-2 text-white/70">
+            Yes. We encode prep times, double bookings, provider constraints, deposit logic, and more.
+          </p>
+        </details>
+        <details class="group p-5">
+          <summary class="cursor-pointer list-none text-lg font-medium">
+            <span class="group-open:text-[#25C6CA]">Which CRMs do you support?</span>
+          </summary>
+          <p class="mt-2 text-white/70">
+            Most popular CRMs via native or Zapier integrations—HubSpot, Pipedrive, Salesforce (via Zapier), and others.
+          </p>
+        </details>
+        <details class="group p-5">
+          <summary class="cursor-pointer list-none text-lg font-medium">
+            <span class="group-open:text-[#25C6CA]">Do callers know it's AI?</span>
+          </summary>
+          <p class="mt-2 text-white/70">
+            You decide. We can present as a virtual assistant or transparently as AI, per your brand.
+          </p>
+        </details>
+        <details class="group p-5">
+          <summary class="cursor-pointer list-none text-lg font-medium">
+            <span class="group-open:text-[#25C6CA]">What about compliance?</span>
+          </summary>
+          <p class="mt-2 text-white/70">
+            We follow best practices for call recording/consent and secure data handling. Ask for our policy pack.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-[#0A131D] text-sm">
+      <div class="mx-auto grid max-w-7xl gap-6 px-6 py-10 md:grid-cols-2">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="h-8 w-8 rounded-xl bg-[#25C6CA]"></div>
+            <div class="text-lg font-semibold">AutofyTech</div>
+          </div>
+          <p class="mt-3 max-w-md text-white/70">
+            AI receptionist &amp; business automations for high-volume booking teams.
+          </p>
+        </div>
+        <div class="md:justify-self-end">
+          <p class="text-white/80">Contact</p>
+          <p class="mt-1 text-white/70">
+            <a class="underline hover:text-white" href="mailto:Jonas@autofytek.com">Jonas@autofytek.com</a>
+          </p>
+          <p class="text-white/70">
+            <a class="underline hover:text-white" href="tel:12044082309">(204) 408-2309</a>
+          </p>
+          <div class="mt-4 flex gap-3">
+            <button id="openDemo5"
+                    class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 hover:bg-white/10">
+              Book a demo
+            </button>
+            <a href="#solutions"
+               class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 hover:bg-white/10">
+              Solutions
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 py-4 text-center text-xs text-white/50">
+        © <span id="year"></span> AutofyTech. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Demo modal -->
+    <div id="demoModal" class="fixed inset-0 z-50 hidden place-items-center bg-black/70 p-6">
+      <div class="w-full max-w-lg rounded-3xl border border-white/10 bg-[#0F1B29] p-6 shadow-2xl">
+        <div class="flex items-start justify-between">
+          <h3 class="text-xl font-semibold">Book a demo</h3>
+          <button id="closeDemo"
+                  class="rounded-full border border-white/10 px-3 py-1 text-xs text-white/70 hover:bg-white/5">
+            Close
+          </button>
+        </div>
+        <p class="mt-2 text-white/70">
+          Tell us a bit about your business and we’ll set up a tailored walkthrough.
+        </p>
+
+        <!-- Netlify/Codex form -->
+        <form name="demo" method="POST" data-netlify="true" class="mt-4 grid gap-3 text-sm">
+          <input type="hidden" name="form-name" value="demo" />
+          <label class="grid gap-1">
+            <span class="text-white/80">Name</span>
+            <input name="name" required
+              class="rounded-xl border border-white/10 bg-[#0B1420] px-3 py-2 outline-none placeholder:text-white/40"
+              placeholder="Jane Doe" />
+          </label>
+          <label class="grid gap-1">
+            <span class="text-white/80">Company</span>
+            <input name="company"
+              class="rounded-xl border border-white/10 bg-[#0B1420] px-3 py-2 outline-none placeholder:text-white/40"
+              placeholder="Acme Plumbing" />
+          </label>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <label class="grid gap-1">
+              <span class="text-white/80">Email</span>
+              <input type="email" name="email" required
+                class="rounded-xl border border-white/10 bg-[#0B1420] px-3 py-2 outline-none placeholder:text-white/40"
+                placeholder="you@company.com" />
+            </label>
+            <label class="grid gap-1">
+              <span class="text-white/80">Phone</span>
+              <input name="phone"
+                class="rounded-xl border border-white/10 bg-[#0B1420] px-3 py-2 outline-none placeholder:text-white/40"
+                placeholder="(555) 555-5555" />
+            </label>
+          </div>
+          <label class="grid gap-1">
+            <span class="text-white/80">What do you want to automate?</span>
+            <textarea name="message" rows="4"
+              class="rounded-xl border border-white/10 bg-[#0B1420] px-3 py-2 outline-none placeholder:text-white/40"
+              placeholder="Booking overflow, after-hours calls, missed call SMS, CRM updates..."></textarea>
+          </label>
+          <div class="mt-2 flex items-center justify-between">
+            <button type="submit"
+              class="rounded-2xl bg-[#25C6CA] px-5 py-2 font-semibold text-[#0B1420] hover:brightness-110">
+              Request demo
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const openButtons = ['openDemo', 'openDemo2', 'openDemo3', 'openDemo4', 'openDemo5'];
+      const modal = document.getElementById('demoModal');
+      const closeBtn = document.getElementById('closeDemo');
+
+      openButtons.forEach(function(id) {
+        const btn = document.getElementById(id);
+        if (btn) {
+          btn.addEventListener('click', function() {
+            modal.classList.remove('hidden');
+          });
+        }
+      });
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+          modal.classList.add('hidden');
+        });
+      }
+
+      // Close modal on backdrop click
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+        }
+      });
+    </script>
+  </body>
+</html>
 
