@@ -1,0 +1,18 @@
+{
+  "name": "schaefers-lakeview-cottage-client",
+  "version": "1.0.0",
+  "description": "Frontend for Schaefers Lakeview Cottage booking site",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "react-big-calendar": "^1.5.1",
+    "date-fns": "^3.6.0",
+    "moment": "^2.29.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  }
+}
